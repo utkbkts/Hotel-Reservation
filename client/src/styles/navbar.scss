@@ -1,0 +1,87 @@
+@import "../styles/variables";
+@import "../styles/breakpoints.scss";
+.navbarcontainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #f5f5f5;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 15px;
+    padding: 10px;
+    .content {
+      img {
+        width: 50px;
+      }
+    }
+    .search {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      padding-inline: 1rem;
+      @include mm {
+        display: none;
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      position: relative;
+      .dropdown {
+        position: absolute;
+        top: 4.5rem;
+        width: 140px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        background: #f5f5f5;
+
+        &.login {
+          top: 3.5rem;
+        }
+
+        a {
+          text-decoration: none;
+          padding: 10px;
+          color: black;
+        }
+        .logout {
+          background: #000;
+          width: 100%;
+          padding: 15px;
+          color: white;
+          text-align: center;
+        }
+      }
+
+      .host {
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      img {
+        width: 40px;
+        border-radius: 50%;
+      }
+      button {
+        border-radius: 10px;
+        outline: none;
+        border: 1px solid $blue;
+        background: none;
+        cursor: pointer;
+        width: 100px;
+        display: flex;
+        padding: 5px;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
